@@ -1,0 +1,34 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplicationasdfasdfasdfasdfasdf.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/edit"
+        android:name="com.example.myapplicationasdfasdfasdfasdfasdf.ui.EditUserFragment"
+        android:label="edit" >
+        <action
+            android:id="@+id/action_edit_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_edit_to_navigation_notifications2"
+            app:destination="@id/navigation_notifications" />
+    </fragment>  <!-- Make sure this matches the class name exactly -->
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.myapplicationasdfasdfasdfasdfasdf.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_edit"
+            app:destination="@id/edit" /> <!-- Ensure this matches the action ID -->
+    </fragment>
+</navigation>
