@@ -85,57 +85,57 @@ class MainActivity() : AppCompatActivity() {
             }
 
 
-            var list: MutableList<Double> = mutableListOf()
-
-            if (users != null && stiprumai != null) {
-                var i = 0
-                while (i < users.count()) {
-
-                    var usr1 = users[i].stiprumas.toInt()
-                    var usr2 = users[i + 1].stiprumas.toInt()
-                    var usr3 = users[i + 2].stiprumas.toInt()
-                    var pwr1 = stiprumai[i].stiprumas.toInt()
-                    var pwr2 = stiprumai[i + 1].stiprumas.toInt()
-                    var pwr3 = stiprumai[i + 2].stiprumas.toInt()
-
-
+//            var list: MutableList<Double> = mutableListOf()
+//
+//            if (users != null && stiprumai != null) {
+//                var i = 0
+//                while (i < users.count()) {
+//
+//                    var usr1 = users[i].stiprumas.toInt()
+//                    var usr2 = users[i + 1].stiprumas.toInt()
+//                    var usr3 = users[i + 2].stiprumas.toInt()
+//                    var pwr1 = stiprumai[i].stiprumas.toInt()
+//                    var pwr2 = stiprumai[i + 1].stiprumas.toInt()
+//                    var pwr3 = stiprumai[i + 2].stiprumas.toInt()
+//
+//
+////                    var math = Math.sqrt(
+////                        (Math.multiplyExact(
+////                            usr1 - pwr1,
+////                            usr1 - pwr1
+////                        ) + Math.multiplyExact(
+////                            usr2 - pwr2,
+////                            usr2 - pwr2
+////                        ) + Math.multiplyExact(usr3 - pwr3, usr3 - pwr3)).toDouble()
+////                    )
 //                    var math = Math.sqrt(
-//                        (Math.multiplyExact(
-//                            usr1 - pwr1,
-//                            usr1 - pwr1
-//                        ) + Math.multiplyExact(
-//                            usr2 - pwr2,
-//                            usr2 - pwr2
-//                        ) + Math.multiplyExact(usr3 - pwr3, usr3 - pwr3)).toDouble()
-//                    )
-                    var math = Math.sqrt(
-                        (Math.pow((usr1).toDouble(),2.0) + Math.pow((usr2).toDouble(),2.0) + Math.pow((usr3).toDouble(),2.0)))
-                    list.add(math)
-
-
-                    i += 3
-                }
-            }
-            if (matavimai != null) {
-                var closet: Double = Double.MAX_VALUE;
-                var sigma: Matavimas = matavimai[0]
-                list.forEach { yeet ->
-
-                    matavimai.forEach() { op ->
-
-                        var a = Math.abs(yeet - op.atstumas)
-
-                        if (a < closet) {
-                            closet = a
-                            sigma = op
-                        }
-
-                    }
-
-                    mute.add(sigma)
-
-                }
-            }
+//                        (Math.pow((usr1).toDouble(),2.0) + Math.pow((usr2).toDouble(),2.0) + Math.pow((usr3).toDouble(),2.0)))
+//                    list.add(math)
+//
+//
+//                    i += 3
+//                }
+//            }
+//            if (matavimai != null) {
+//                var closet: Double = Double.MAX_VALUE;
+//                var sigma: Matavimas = matavimai[0]
+//                list.forEach { yeet ->
+//
+//                    matavimai.forEach() { op ->
+//
+//                        var a = Math.abs(yeet - op.atstumas)
+//
+//                        if (a < closet) {
+//                            closet = a
+//                            sigma = op
+//                        }
+//
+//                    }
+//
+//                    mute.add(sigma)
+//
+//                }
+//            }
 
 //            MatavimasDao.deleteAllSignals()
 //            mute.forEach { matavimas ->

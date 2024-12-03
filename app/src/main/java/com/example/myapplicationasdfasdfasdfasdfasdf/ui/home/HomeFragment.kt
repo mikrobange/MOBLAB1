@@ -106,13 +106,7 @@ class HomeFragment : Fragment() {
         HomeView.usrList.observe(viewLifecycleOwner, Observer { signals ->
             signals?.let {
                 vartotojai = HomeView.USERS
-
                 if (vartotojai != null) {
-
-
-
-
-
                     isVartotojaiUpdated = true
                     if (isVartotojaiUpdated && isStiprumaiUpdated){
                         Log.d("VARTOTOJAI", vartotojai!!.size.toString())
@@ -131,15 +125,12 @@ class HomeFragment : Fragment() {
                                 if (it != null && it.size >= 3 && ONCE) {
                                     ONCE = false
                                     HomeView.BOB(it)
-
                                 }
                             }
                         }
                     }
-
-
                 }
-                //executeIfReady(vartotojai, stiprumai, isVartotojaiUpdated, isStiprumaiUpdated)
+                //executIfReady(vartotojai, stiprumai, isVartotojaiUpdated, isStiprumaiUpdated)
             }
         })
 
